@@ -22,7 +22,7 @@ const poppins = Poppins({
 
 const page = () => {
   return (
-    <div className='w-full bg-blue-500  h-full'>
+    <div className='w-full md:w-full bg-blue-500  h-full'>
       <div className='bg-transparent backdrop-blur-md w-full h-[70px] flex justify-between content-center items-center shadow-lg px-4 fixed overflow-hidden'>
         <div className='flex p-2 '>
           <h1 className='font-bold md:text-6xl text-2xl font-signature'><Link href={"../"}>MN</Link></h1>
