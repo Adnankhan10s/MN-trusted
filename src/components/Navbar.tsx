@@ -126,7 +126,7 @@ const Navbar = () => {
                 <ul className='text-4xl   font-para my-20 text-center space-y-8 '>
                 {
                     navLinks.map((link , index)=>(
-                       <li key={index} className={`${poppins.className} font-bold text-black hover:text-[#1a1918]`}>
+                       <li key={index} className={`${poppins.className} font-bold text-black hover:text-[#c7a98a]`}>
                           <Link onClick={closeNav} href={link.path}>{link.title}</Link>
                        </li>
                     ))
