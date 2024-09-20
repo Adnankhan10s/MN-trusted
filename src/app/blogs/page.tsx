@@ -6,6 +6,7 @@ import { Poppins , DM_Serif_Text, Cookie } from 'next/font/google';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Footer from '@/components/Footer';
 
 const cookie = Cookie({
   weight:"400",
@@ -47,7 +48,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className=' h-full md:w-full  justify-center pt-24  '>
+      <div className=' h-full md:w-full  justify-center py-24  '>
       
       <motion.div
         initial={{ opacity: 0 }}
@@ -60,10 +61,10 @@ const page = () => {
 
       </motion.div> 
              
-         <div className=' border-t-2 border-[#f99b27] pt-24 md:px-6 mt-10 md:w-full  grid sm:grid-cols-2 md:grid-cols-3 z-30  grid-cols-1  justify-items-center  gap-6  mx-auto  '>
+         <div className=' border-t-2 border-[#f99b27] py-20 md:px-6 mt-10 md:w-full  grid sm:grid-cols-2 md:grid-cols-3 lg:grid-col-4 z-30  grid-cols-1  justify-items-center  gap-6  mx-auto  '>
           {/* Blog Cards */}
           <div className='shadow-xl w-[320px]  md:w-[300px] h-[470px] hover:scale-105  duration-75   mt-2  rounded overflow-hidden'>
-            <Image src={'/blogs/blog1.jpg'} priority alt='img1' width={400} height={400}  className='w-full'/>
+            <Image src={'/blogs/blog1.jpg'} priority alt='img1' width={400} height={400}  objectFit='cover' className='w-full'/>
             <div className='px-6 py-4'>
               <div className='font-bold text-xl mb-2'>
                   Technology
@@ -130,9 +131,9 @@ const page = () => {
         </div>
       </div>
 
-
-
-
+<div className='w-full border-t-2 border-[#f99b27]'>
+<Footer  />
+</div>
 
     </div>
 

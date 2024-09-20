@@ -28,7 +28,7 @@ const bebasneue = Bebas_Neue({
 
 const Hero2 = () => {
   return (
-    <div className='md:min-w-full md:min-h-[850px] w-full  px-4 md:px-0  max-h-[1200px] bg-white text-black text-4xl pt-10 '>
+    <div className='md:min-w-full md:min-h-[850px] w-full  px-4 md:px-0  max-h-[1200px] bg-slate-300 text-black text-4xl pt-10 '>
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -50,11 +50,11 @@ const Hero2 = () => {
 
       <div className='md:flex  justify-center items-center  pt-10  gap-6 md:gap-9'>
         <Image
-          src={Circle}
+          src={"/stress.jpg"}
           alt='circle'
-          width={200}
-          height={200}
-          className='rounded-full border-blue-600 border-[20px] mx-auto md:mx-0 md:w-[400px] md:h-[400px] w-[200px] h-[200px]'
+          width={150}
+          height={150}
+          className='rounded-full border-blue-400 border-[20px] mx-auto md:mx-0 md:w-[350px] md:h-[350px] w-[200px] h-[200px]'
         />
         <div className='flex justify-center items-center md:pt-6  pt-4'  >
           <ul className='md:text-lg md:space-y-2 text-[10px] md:pt-2 '>

@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {FaRegistered } from 'react-icons/fa';
 import {AiOutlineClose , AiOutlineMenu} from 'react-icons/ai';
 import {motion} from 'framer-motion';
@@ -59,6 +59,14 @@ const Navbar = () => {
         }
     }
    }
+
+   useEffect(()=>{
+    if(nav){
+        document.body.style.overflow="hidden";
+    } else{
+        document.body.style.overflow="auto";
+    }
+   },[nav]);
   return (
     <nav>
         <div className='hidden md:flex md:w-full h-[60px]  bg-[#0066cc] text-white p-4 shadow-md  fixed  '>  
@@ -81,7 +89,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile view */}
-<div className='md:hidden w-full h-[100px] bg-[#0066cc] text-white shadow-md  relative'>
+<div className='md:hidden w-full h-[100px] bg-[#0066cc] text-white shadow-md relative'>
          <div className=' text-center block items-center justify-center top-4 '>
             <h1 className={`font-semibold text-6xl pt-2 ${dmSeriftext.className}` }>M N</h1>
             <div className='flex items-center justify-center'>
@@ -90,7 +98,7 @@ const Navbar = () => {
            </div>
             
             </div>
-            <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 z-50 ">
+            <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 z-50  ">
                  {nav ? <AiOutlineClose size={25} />: <AiOutlineMenu size={25}/>}
             </div>
             
@@ -98,17 +106,27 @@ const Navbar = () => {
             initial = {false}
             animate ={nav ? 'open' : 'closed'}
             variants={menuVarients}
-            className='fixed top-0 left-0 w-full z-40 bg-white/30  backdrop-blur-xl '
+            className='fixed top-0 left-0 w-full h-screen z-40 bg-white/30  backdrop-blur-xl '
 
             >
-                <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 z-50 ">
-                  <AiOutlineClose size={25} />
+                 <div className=' text-center block items-center justify-center top-4 '>
+            <h1 className={`font-semibold text-6xl pt-2 ${dmSeriftext.className}` }>M N</h1>
+            <div className='flex items-center justify-center'>
+           <p className={`font-semibold text-xl pr-2 ${roboto.className} bg-gradient-to-b from-[#ff874a]  to-[#ffd9b2] inline-block text-transparent bg-clip-text`}>Trusted </p>
+           <FaRegistered  size={15} />
+           </div>
+            
             </div>
                 
-                <ul className='text-4xl  font-para my-24 text-center space-y-8 '>
+                <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 z-50 ">
+                  <AiOutlineClose size={25} />
+
+            </div>
+                
+                <ul className='text-4xl   font-para my-20 text-center space-y-8 '>
                 {
                     navLinks.map((link , index)=>(
-                       <li key={index} className={`${poppins.className} font-bold text-[#ff874a] hover:text-[#1a1918]`}>
+                       <li key={index} className={`${poppins.className} font-bold text-black hover:text-[#1a1918]`}>
                           <Link onClick={closeNav} href={link.path}>{link.title}</Link>
                        </li>
                     ))
