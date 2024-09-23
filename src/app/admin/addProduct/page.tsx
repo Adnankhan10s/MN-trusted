@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useState } from "react"
 
-const page = () => {
+const Page = () => {
   const [image ,setImage] = useState<File | null>(null);
 
   return (
@@ -21,4 +21,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
