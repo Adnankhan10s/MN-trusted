@@ -3,6 +3,7 @@ import { FaRegistered } from 'react-icons/fa';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
+import Image from 'next/image';
 
 
 
@@ -15,14 +16,12 @@ const Contact = () => {
   
   
   return (
-    <div className='bg-[#0066cc] md:w-full   relative z-10'>
-      <div className='flex w-full h-[60px]  bg-[#0066cc] text-white p-4 shadow-md    '>
-        <div className='flex justify-center items-center text-center  w-[100%] '>
-          <div className='flex p-2 '>
-            <h1 className='font-bold text-6xl font-signature'><Link href={"/"}>MN</Link></h1>
-            <p className='font-semibold text-2xl font-para bg-gradient-to-b from-[#ff874a]  to-[#ffd9b2] inline-block text-transparent bg-clip-text'>Trusted </p>
-            <FaRegistered size={15} className='text-[#ff874a] pt-2 ' />
-          </div>
+    <div className='bg-[#0066cc] md:w-full  h-full  relative z-10'>
+      <div className='flex w-full h-[80px]  bg-[#0066cc] text-white p-4 shadow-md    '>
+        <div className='flex justify-center items-center text-center  w-[100%]  '>
+        <Link href={"/"}>
+        <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='w-[300px] h-[270px] text-black' />
+        </Link>
         </div>
       </div>
       {/* Form */}
@@ -32,9 +31,9 @@ const Contact = () => {
          
       </div>
 
-
+      <div className='md:mt-6 '>
       <hr />
-      <div>
+      
         <Footer />
       </div>
 

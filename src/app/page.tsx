@@ -7,14 +7,16 @@ import ServiceList from "@/components/ServiceList";
 
 export default function Home() {
   return (
+   
    <div>
+   
     <Navbar />
     <Hero />
     <Hero2 />
     <About />
     <ServiceList />
     <Footer />
-
+    
    </div>
   );
 }

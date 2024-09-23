@@ -31,15 +31,15 @@ const page = () => {
     // Nav Section
     <div className='  bg-blue-500  md:w-full'>
       <div className='bg-transparent backdrop-blur-md w-full h-[70px] flex justify-around  content-center items-center shadow-lg md:px-4 px-2 fixed z-50 overflow-hidden'>
-        <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='md:w-[300px] w-[140px] md:h-[250px] text-black' />
-
+        <Link href={"/"}><Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='md:w-[300px] w-[140px] md:h-[250px] text-black' />
+        </Link>
         <div>
-          <h1 className={`md:text-4xl pr-4 md:pr-0 text-2xl text-[#bb8c53] font-extrabold ${poppins.className} `}>Blogs</h1>
+          <h1 className={`md:text-4xl pr-4 md:pr-0 text-2xl text-[#cdbb87] font-extrabold ${poppins.className} `}>Blogs</h1>
         </div>
 
 
         <div >
-          <Link href='/contact' className='pr-2 md:pr-0 inline-flex items-center md:px-6 px-2 md:py-2 py-2 bg-[#f9mt-2] rounded-md text-white font-bold text-[12px] md:text-[18px]  bg-[#bb8c53] hover:text-black/70 '>CONTACT <MdOutlineKeyboardArrowRight size={22} />
+          <Link href='/contact' className=' inline-flex items-center md:px-8 px-2 md:py-2 py-2 bg-[#f9mt-2] rounded-md text-white font-bold text-[12px] md:text-[18px]  bg-[#bb8c53] hover:text-black/70 '>CONTACT <MdOutlineKeyboardArrowRight size={22} />
           </Link>
         </div>
       </div>

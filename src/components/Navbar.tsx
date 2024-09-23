@@ -1,7 +1,6 @@
 "use client"
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import {FaRegistered } from 'react-icons/fa';
 import {AiOutlineClose , AiOutlineMenu} from 'react-icons/ai';
 import {motion} from 'framer-motion';
 import { DM_Serif_Text } from 'next/font/google';
@@ -22,11 +21,7 @@ const roboto = Roboto({
     display:"swap"
 })
 
-const dmSeriftext = DM_Serif_Text({
-    weight:"400",
-    subsets:["latin"],
-    display:"swap"
-})
+
 
 
 const navLinks =[
@@ -70,10 +65,12 @@ const Navbar = () => {
     }
    },[nav]);
   return (
-    <nav >
+    <section>
         <div className='hidden md:flex md:w-full h-[80px] bg-transparent backdrop-blur-lg   text-white p-4 shadow-md   fixed  overflow-hidden '>  
         <div className='flex justify-between items-center text-center   w-[100%]  '>
+            <Link href={"/"}>
         <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='w-[300px] h-[270px] text-black' />
+        </Link>
             <div className=''>
                 <ul className={`flex gap-4 pr-2 ${roboto.className}  text-[16px]  lg:text-2xl font-semibold`}>
                     {navLinks.map((link , index)=>(
@@ -126,7 +123,7 @@ const Navbar = () => {
             </div>
 
         
-    </nav>
+   </section>
   )
 }
 
