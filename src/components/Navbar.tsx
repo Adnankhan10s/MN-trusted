@@ -92,7 +92,7 @@ const Navbar = () => {
 <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='w-[250px] h-[200px] text-black' />
 
          
-            <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 z-50">
+            <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 ">
                  {nav ? <AiOutlineClose size={25} />: <AiOutlineMenu size={25}/>}
             </div>
             
@@ -103,9 +103,13 @@ const Navbar = () => {
             className='fixed  top-0 left-0 w-full h-screen z-40 bg-white/30  backdrop-blur-xl '
 
             >
+                <div className='w-full h-[100px] flex justify-between items-center content-center  '>
+                 <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 ">
+                 {nav ? <AiOutlineClose size={25} />: <AiOutlineMenu size={25}/>}
+            </div>
                <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className=' w-[250px] h-[130px] text-black  ' />
                
-              
+               </div>
                 
                 <ul className='text-4xl   font-para mt-6 text-center space-y-8 '>
                 {
