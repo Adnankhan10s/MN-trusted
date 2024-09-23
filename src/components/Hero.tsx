@@ -13,7 +13,7 @@ const oswald = Oswald({
 
 const Hero = () => {
     return (
-        <div className='md:w-full w-full md:h-[800px] h-[800px]  items-center md:pt-20 pt-6 bg-[#0066cc] ' id='home'>
+        <div className='md:w-full w-full md:h-[800px] h-[800px]  items-center md:pt-28 pt-6 bg-[#0066cc]' id='home'>
             <div className=' text-center w-full  '>
                 
                 <p className='text-sm md:text-lg  font-serif text-white/70 p-2 inline-flex items-center'>

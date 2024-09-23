@@ -30,12 +30,8 @@ const page = () => {
   return (
     // Nav Section
     <div className='  bg-blue-500  md:w-full'>
-      <div className='bg-transparent backdrop-blur-md w-full h-[70px] flex justify-between content-center items-center shadow-lg px-4 fixed z-50 overflow-hidden'>
-        <div className='flex p-2 '>
-          <h1 className={`font-bold md:text-6xl text-2xl ${dmSeriftext.className} `}><Link href={"../"}>MN</Link></h1>
-          <p className='font-semibold md:text-2xl text-sm font-para bg-gradient-to-b from-[#ff874a]  to-[#ffd9b2] inline-block text-transparent bg-clip-text'>Trusted </p>
-          <FaRegistered size={15} className='text-[#ff874a] pt-2 ' />
-        </div>
+      <div className='bg-transparent backdrop-blur-md w-full h-[70px] flex justify-between content-center items-center shadow-lg md:px-4 px-2 fixed z-50 overflow-hidden'>
+      <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='md:w-[300px] w-[170px] md:h-[250px] text-black' />
 
         <div>
           <h1 className={`md:text-4xl text-2xl text-white font-extrabold ${poppins.className} `}>Blogs</h1>

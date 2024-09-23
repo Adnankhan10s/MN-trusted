@@ -3,7 +3,6 @@ import React from 'react';
 import { Cookie, Bebas_Neue, Oswald } from 'next/font/google';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Circle from '@/../public/va-circle.jpg';
 import { SiTicktick } from "react-icons/si";
 import Link from 'next/link';
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
@@ -65,10 +64,10 @@ const Hero2 = () => {
             <li><span><SiTicktick size={20} className='text-blue-600 inline-flex md:size-8' /></span> You need help but cannot afford the cost of hiring an in-office employee.</li>
             <li><span><SiTicktick size={20} className='text-blue-600 inline-flex md:size-8' /></span> You only want to pay for the work you need when you need it.</li>
             <li><span><SiTicktick size={20} className='text-blue-600 inline-flex md:size-8 ' /></span> You don’t have the time to hire, recruit and train a new assistant.</li>
-            <p className='pt-4'>Welcome to <span className={`text-[#f99b27] ${oswald.className} font-bold cursor-pointer`}>MN Trusted</span>, you've come to the right place.
+            <p className='pt-4 text-[16px]'>Welcome to <span className={`text-[#f99b27] ${oswald.className} font-bold cursor-pointer`}>MN Trusted</span>, you've come to the right place.
             </p>
-            <p>We specialize in providing Virtual Assistant Tailored for the Real Estate Industry </p>
-            <p>Help is here; we are making your entrepreneurial journey more manageable.</p>
+            <p className='text-[16px]'>We specialize in providing Virtual Assistant Tailored for the Real Estate Industry </p>
+            <p className='text-[16px]'>Help is here; we are making your entrepreneurial journey more manageable.</p>
             
            <div className='md:pt-4'>
             <Link href='/contact' className='inline-flex items-center md:px-6 px-4 md:py-2 py-2 bg-[#f99b27] rounded-md text-white font-bold hover:bg-[#bb8c53] hover:text-black/70 '>FEEL FREE TO CONTACT US <MdOutlineKeyboardArrowRight size={22}  />
