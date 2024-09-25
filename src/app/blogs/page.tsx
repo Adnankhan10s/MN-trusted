@@ -1,8 +1,7 @@
 "use client"
 import Link from 'next/link';
 import React from 'react';
-import { FaRegistered } from 'react-icons/fa6';
-import { Poppins, DM_Serif_Text, Cookie } from 'next/font/google';
+import { Poppins, Cookie } from 'next/font/google';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -19,18 +18,14 @@ const poppins = Poppins({
   display: "swap",
   subsets: ["latin"]
 });
-const dmSeriftext = DM_Serif_Text({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap"
-})
+
 
 
 const page = () => {
   return (
     // Nav Section
-    <div className='  bg-blue-500  md:w-full'>
-      <div className='bg-transparent backdrop-blur-md w-full h-[70px] flex justify-around  content-center items-center shadow-lg md:px-4 px-2 fixed z-50 overflow-hidden'>
+    <div className='bg-blue-500  md:w-full'>
+      <div className='bg-transparent backdrop-blur-md w-full h-[70px] md:h-[80px] flex justify-around md:justify-between  content-center items-center shadow-lg md:px-4 px-2 fixed z-50 overflow-hidden'>
         <Link href={"/"}><Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='md:w-[300px] w-[140px] md:h-[250px] text-black' />
         </Link>
         <div>
