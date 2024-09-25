@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import {AiOutlineClose , AiOutlineMenu} from 'react-icons/ai';
 import {motion} from 'framer-motion';
-import { DM_Serif_Text } from 'next/font/google';
 import { Roboto } from 'next/font/google';
 import { Poppins } from 'next/font/google';
 import Image from 'next/image';
@@ -85,8 +84,8 @@ const Navbar = () => {
 
         {/* Mobile view */}
        
-<div className='md:hidden flex items-center w-full h-[100px] bg-[#0066cc] text-white shadow-md relative'>
-<Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='w-[250px] h-[200px] text-black' />
+<div className='md:hidden flex items-center w-full h-[80px] bg-[#0066cc] text-white shadow-md relative'>
+<Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='w-[220px] h-[200px] text-black' />
 
          
             <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 ">
@@ -104,7 +103,7 @@ const Navbar = () => {
                  <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 ">
                  {nav ? <AiOutlineClose size={25} />: <AiOutlineMenu size={25}/>}
             </div>
-               <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className=' w-[250px] h-[130px] text-black  ' />
+               <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className=' w-[250px] h-[200px] text-black  ' />
                
                </div>
                 
