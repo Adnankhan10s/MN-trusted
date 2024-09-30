@@ -38,7 +38,7 @@ const Footer = () => {
             <h1 className='md:font-bold text-white md:mb-4 mt-4 md:mt-0'>CONTACT US :</h1>
             <div className='leading-10 mt-4 md:mt-0 text-lg'>
               <span className={roboto.className}><a href='tel:+92 341258068' className=' md:font-bold  text-white hover:underline'>+92 3412458068</a><br /></span>
-              <span className={roboto.className}><a href='mailto:email@echoecho.com?subject=SweetWords&body=Send Some Query' className=' md:font-bold  text-white hover:underline'>mntrusted@gmail.com</a></span>
+              <span className={roboto.className}><a href='mailto:mntrusted@gmail.com?subject=Enter Subject For Which Service&body=Type Message' className=' md:font-bold  text-white hover:underline'>mntrusted@gmail.com</a></span>
             </div>
 
 
@@ -77,7 +77,7 @@ const Footer = () => {
           <h1 className='font-bold text-white text-center text-xl pt-6'>CONTACT US :</h1>
           <div className='flex justify-center items-center space-x-6 mt-4  '>
             <span className={roboto.className}><a href='tel:+92 341258068' className=' font-bold inline-flex items-center text-white hover:underline gap-2'> <BsTelephone size={25} /> +92 3412458068</a><br /></span>
-            <span className={roboto.className}><a href='mailto:mntrusted@gmail.com?subject=What Can I Help You&body=Send Some Query' className=' font-bold text-white hover:underline inline-flex gap-2'><MdEmail size={25} /> mntrusted@gmail.com</a></span>
+            <span className={roboto.className}><a href='mailto:mntrusted@gmail.com?subject=Enter Subject For Which Service You&body=Type Message' className=' font-bold text-white hover:underline inline-flex gap-2'><MdEmail size={25} /> mntrusted@gmail.com</a></span>
           </div>
         </div>
 

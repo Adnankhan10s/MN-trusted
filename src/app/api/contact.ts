@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const mailOptions = {
       from: email,
-      to: "admin@example.com", // replace with the admin email
+      to: "mntrusted@gmail.com", // replace with the admin email
       subject: `New Contact Form Submission from ${username}`,
       text: `
         Username: ${username}

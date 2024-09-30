@@ -1,7 +1,7 @@
 import Sidebar from "@/components/AdminComponents/Sidebar";
 import Image from "next/image";
 
-export default function Layout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+export default function Layout({ children }: Readonly<{ children: React.ReactNode; }>) {
 
   return (
     <>
