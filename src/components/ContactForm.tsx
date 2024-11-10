@@ -4,6 +4,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Bebas_Neue } from "next/font/google";
 import { categories } from "../../serviceData";
+import { ToastContainer , toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const bebas_neue = Bebas_Neue({
     weight:"400",
@@ -41,16 +44,18 @@ const  ContactForm=()=> {
             },
             body: JSON.stringify(data),
         });
+        
 
         if (response.ok) {
-            alert("Message sent successfully!");
+            toast.success("Message sent successfully!");
         } else {
-            alert("Failed to send message.");
+            toast.error("Failed to send message.");
         }
     };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="md:max-w-4xl mx-auto p-8 bg-white/40 backdrop-blur-md shadow-lg rounded-lg">
+            <ToastContainer />
             <h1 className={`${bebas_neue.className}md:text-6xl text-4xl font-bold mb-6 text-center text-[#ff874a]`}>Contact Us</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
