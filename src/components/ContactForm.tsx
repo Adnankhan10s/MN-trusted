@@ -48,8 +48,10 @@ const  ContactForm=()=> {
 
         if (response.ok) {
             toast.success("Message sent successfully!");
+            data=("");
         } else {
             toast.error("Failed to send message.");
+            data=("")
         }
     };
 
