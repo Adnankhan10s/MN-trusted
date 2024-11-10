@@ -68,7 +68,7 @@ const Navbar = () => {
         <div className='z-30  hidden md:flex md:w-full h-[80px] bg-transparent backdrop-blur-sm   text-[#00004f] p-4 shadow-md   fixed  overflow-hidden '>  
         <div className='flex justify-between items-center text-center   w-[100%]  '>
             <Link href={"/"}>
-        <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='w-[300px] h-[270px] text-black' />
+        <Image src={"/Logo.png"} width={500} height={500} alt='logo' className='w-[250px] h-[60px] text-black' />
         </Link>
             <div className=''>
                 <ul className={`flex gap-4 pr-2 ${roboto.className}  text-[16px]  lg:text-2xl font-bold`}>
@@ -84,8 +84,8 @@ const Navbar = () => {
 
         {/* Mobile view */}
        <div className='z-50 md:hidden w-full h-[80px] fixed   '>
-<div className=' z-50 md:hidden relative    flex items-center w-full h-[80px] bg-transparent backdrop-blur-md  shadow-md '>
-<Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='w-[220px] h-[200px] text-black' />
+<div className=' z-50 md:hidden relative px-4   flex items-center w-full h-[80px] bg-white/40 backdrop-blur-md  shadow-md '>
+<Image src={"/Logo.png"} width={500} height={500} alt='logo' className='w-[180px] h-[50px] text-black' />
 
          
             <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-black border-black/80 p-2 ">
@@ -96,14 +96,14 @@ const Navbar = () => {
             initial = {false}
             animate ={nav ? 'open' : 'closed'}
             variants={menuVarients}
-            className='fixed  top-0 left-0 w-full h-screen z-40 bg-white/30  backdrop-blur-xl '
+            className='fixed  top-0 left-0 w-full h-screen z-40 bg-slate-300  backdrop-blur-xl '
 
             >
-                <div className='w-full h-[100px] flex justify-between items-center content-center  '>
-                 <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 ">
+                <div className='w-full h-[100px] px-4 flex justify-between border-b-2 border-[#00004f] items-center content-center  '>
+                 <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-[#1c1c1c] border-[#1c1c1c] p-2 ">
                  {nav ? <AiOutlineClose size={25} />: <AiOutlineMenu size={25}/>}
             </div>
-               <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className=' w-[250px] h-[200px] text-black  ' />
+               <Image src={"/Logo.png"} width={500} height={500} alt='logo' className=' w-[180px] h-[60px] text-black  ' />
                
                </div>
                 

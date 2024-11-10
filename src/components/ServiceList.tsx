@@ -20,7 +20,7 @@ const bebasneue = Bebas_Neue({
 
 const ServiceList = () => {
   return (
-   <div className='md:w-full bg-slate-300 flex justify-center md:h-[600px] h-[800px] border-t border-2 border-[[#00004f] ' id='services'>
+   <div className='md:w-full bg-slate-200 flex justify-center md:h-[600px] h-[800px] border-t border-2 border-[[#00004f] ' id='services'>
     <motion.div
     initial={{opacity:0 , scale:0 }}
     whileInView={{opacity:1 , scale: 1}}

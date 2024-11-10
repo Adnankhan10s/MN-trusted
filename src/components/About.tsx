@@ -30,19 +30,19 @@ const services = [
 const About = () => {
   return (
     <>
-      <div className='w-full md:h-[1200px] h-[1700px] bg-slate-300 border-t-2 border-slate-400 shadow-inner'>
+      <div className='w-full md:h-[1200px] h-[1700px] bg-slate-200 border-t-2 border-slate-400 shadow-inner'>
         <AboutHead />
 
          <AboutCard />
          <div className='text-center text-black md:leading-8 leading-6 md:pt-9'>
-         <h1 className=' text-[#f99b27] text-2xl  font-bold'>
+         <h1 className=' text-[#00004f] md:text-2xl text-xl font-bold'>
            Get the best property listing services</h1>
 
-        <p className='text-[12px] md:text-[16px] pt-2'> Find the best property listing services you need to help you successfully meet your project planning goals and deadline </p>
+        <p className='text-[12px] md:text-[16px] px-2 pt-2'> Find the best property listing services you need to help you successfully meet your project planning goals and deadline </p>
 
-         <p> We specialize in providing Virtual Assistance tailored for the Real Estate industry, backed by over a decade of experience. Alongside my dedicated team, we have successfully executed numerous projects for a diverse clientele including Investors, Agents, Brokers, and Property Owners.</p>
+         <p className='md:text-base text-[14px] px-4 pt-2'> We specialize in providing Virtual Assistance tailored for the Real Estate industry, backed by over a decade of experience. Alongside my dedicated team, we have successfully executed numerous projects for a diverse clientele including Investors, Agents, Brokers, and Property Owners.</p>
 
-        <p>Our team offers expertise in a wide range of services, including:
+        <p className='pt-2'>Our team offers expertise in a wide range of services, including:
          </p>
 
          <ul className='pt-6 text-start px-14 leading-8 space-y-4 '>
