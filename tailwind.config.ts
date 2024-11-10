@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-     
+      screens: {
+        'xs': '360px',  // Custom screen size for 360px width
+      },
     },
   },
   plugins: [],
