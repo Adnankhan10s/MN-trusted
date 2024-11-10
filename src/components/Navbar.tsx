@@ -110,7 +110,7 @@ const Navbar = () => {
                 <ul className='text-4xl   font-para mt-6 text-center space-y-8 '>
                 {
                     navLinks.map((link , index)=>(
-                       <li key={index} className={`${poppins.className} font-bold text-black hover:text-[#c7a98a]`}>
+                       <li key={index} className={`${poppins.className} font-bold text-[#00004f] hover:text-[#c7a98a]`}>
                           <Link onClick={closeNav} href={link.path}>{link.title}</Link>
                        </li>
                     ))
