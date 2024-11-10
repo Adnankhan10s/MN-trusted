@@ -8,7 +8,7 @@ import ServiceList from "@/components/ServiceList";
 export default function Home() {
   return (
    
-   <div>
+   <>
    
     <Navbar />
     <Hero />
@@ -17,6 +17,6 @@ export default function Home() {
     <ServiceList />
     <Footer />
     
-   </div>
+   </>
   );
 }

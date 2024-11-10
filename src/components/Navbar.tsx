@@ -65,13 +65,13 @@ const Navbar = () => {
    },[nav]);
   return (
     <section>
-        <div className='hidden md:flex md:w-full h-[80px] bg-transparent backdrop-blur-lg   text-white p-4 shadow-md   fixed  overflow-hidden '>  
+        <div className='z-30  hidden md:flex md:w-full h-[80px] bg-transparent backdrop-blur-sm   text-[#00004f] p-4 shadow-md   fixed  overflow-hidden '>  
         <div className='flex justify-between items-center text-center   w-[100%]  '>
             <Link href={"/"}>
         <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='w-[300px] h-[270px] text-black' />
         </Link>
             <div className=''>
-                <ul className={`flex gap-4 pr-2 ${roboto.className}  text-[16px]  lg:text-2xl font-semibold`}>
+                <ul className={`flex gap-4 pr-2 ${roboto.className}  text-[16px]  lg:text-2xl font-bold`}>
                     {navLinks.map((link , index)=>(
                        <li key={index} className='hover:text-[#ff874a]'>
                         <Link href={link.path}>{link.title}</Link>
@@ -83,12 +83,12 @@ const Navbar = () => {
         </div>
 
         {/* Mobile view */}
-       
-<div className='md:hidden flex items-center w-full h-[80px] bg-[#0066cc] text-white shadow-md relative'>
+       <div className='z-50 md:hidden w-full h-[80px] fixed   '>
+<div className=' z-50 md:hidden relative    flex items-center w-full h-[80px] bg-transparent backdrop-blur-md  shadow-md '>
 <Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='w-[220px] h-[200px] text-black' />
 
          
-            <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-white border-white/80 p-2 ">
+            <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-black border-black/80 p-2 ">
                  {nav ? <AiOutlineClose size={25} />: <AiOutlineMenu size={25}/>}
             </div>
             
@@ -120,7 +120,7 @@ const Navbar = () => {
             </motion.div>
 
             </div>
-
+            </div>
         
    </section>
   )
