@@ -6,6 +6,13 @@ import { categories } from '../../../../serviceData';
 import { notFound } from 'next/navigation';
 import { Oswald } from 'next/font/google';
 import ItemList from '@/components/otherComponents/ItemList';
+import { Montserrat } from 'next/font/google';
+
+const monserrat = Montserrat({
+weight:"600",
+subsets:["latin"],
+display:"auto"
+});
 
 const oswald = Oswald({
    weight:"600",

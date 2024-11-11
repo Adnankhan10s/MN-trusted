@@ -3,7 +3,13 @@ import React from 'react';
 import { Item } from '../../../serviceData';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Lato } from 'next/font/google';
 
+const lato = Lato({
+weight:"900",
+subsets:["latin"],
+display:"auto"
+});
 interface ItemsListProps{
  items:Item[];
 }
@@ -23,8 +29,8 @@ const ItemList : React.FC<ItemsListProps> = ({items}) => {
                     >
                         <div className='space-y-2 w-full'>
                          {/* <h2 className='text-white/70 text-7xl my-4'>{`0 ${index +1}`}</h2> */}
-                         <h2 className='md:text-4xl 2xl:text-6xl text-2xl font-bold text-[#f99b27]'>{item.title}</h2>
-                         <p className='md:text-lg text-gray-950 break-words font-semibold md:font-bold md:p-4 px-2 py-2'>{item.description}</p>
+                         <h2 className={`${lato.className} md:text-4xl 2xl:text-6xl text-2xl font-bold text-[#f99b27]`}>{item.title}</h2>
+                         <p className='md:text-lg text-gray-950 break-words  md:font-bold md:p-4 px-1 py-2'>{item.description}</p>
                          <div className='w-64 h-[1px] bg-[#00004f] my-4'>
                          </div>
                         
