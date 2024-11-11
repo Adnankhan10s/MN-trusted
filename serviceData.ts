@@ -7,13 +7,15 @@ export interface Category{
     id:string;
     title:string;
     mainImage:string;
+    description?:string;
     items:Item[];
 }
 export const categories:Category[]=[
     {
     id:"service-1",
     title:"Real Estate Reports Creation",
-    mainImage:"/report-creation/main-img.jpg",
+    mainImage:"/report-creation/rp.png",
+    description:"MN-Trusted is a real estate reporting platform designed to streamline the creation and sharing of property reports. It enables users to quickly compile essential data, market analysis, and property details into professional, easy-to-read reports. MN-Trusted simplifies report generation for real estate agents, investors, and property managers, enhancing client communication and decision-making with reliable, well-structured insights.",
     items:[
         {image:"/report-creation/img1.jpg",
         title:"Reports on Housing Market",

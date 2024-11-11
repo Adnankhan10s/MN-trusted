@@ -103,8 +103,9 @@ const Navbar = () => {
                  <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-[#1c1c1c] border-[#1c1c1c] p-2 ">
                  {nav ? <AiOutlineClose size={25} />: <AiOutlineMenu size={25}/>}
             </div>
+             <Link href={"/"}>
                <Image src={"/Logo.png"} width={500} height={500} alt='logo' className=' w-[180px] h-[60px] text-black  ' />
-               
+               </Link>
                </div>
                 
                 <ul className='text-4xl   font-para mt-6 text-center space-y-8 '>

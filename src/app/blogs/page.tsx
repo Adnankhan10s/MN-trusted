@@ -25,8 +25,8 @@ const page = () => {
   return (
     // Nav Section
     <div className='bg-blue-500  md:w-full'>
-      <div className='bg-transparent backdrop-blur-md w-full h-[70px] md:h-[80px] flex justify-around md:justify-between  content-center items-center shadow-lg md:px-4 px-2 fixed z-50 overflow-hidden'>
-        <Link href={"/"}><Image src={"/logo_transparent.png"} width={500} height={500} alt='logo' className='md:w-[300px] w-[140px] md:h-[250px] text-black' />
+      <div className='bg-transparent backdrop-blur-md w-full h-[70px] md:h-[80px] flex justify-between md:justify-between  content-center items-center shadow-lg md:px-2 px-2 fixed z-50 overflow-hidden'>
+        <Link href={"/"}><Image src={"/Logo.png"} width={500} height={500} alt='logo' className='md:w-[250px] w-[150px] h-[60px] text-black' />
         </Link>
         <div>
           <h1 className={`md:text-4xl pr-4 md:pr-0 text-2xl text-[#cdbb87] font-extrabold ${poppins.className} `}>Blogs</h1>
