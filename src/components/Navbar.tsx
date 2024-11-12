@@ -55,7 +55,8 @@ const Navbar = () => {
         }
     }
    }
-
+     
+      
    useEffect(()=>{
     if(nav){
         document.body.style.overflow="hidden";
@@ -65,7 +66,9 @@ const Navbar = () => {
    },[nav]);
   return (
     <section>
-        <div className='z-30  hidden md:flex md:w-full h-[80px] bg-transparent backdrop-blur-sm   text-[#00004f] p-4 shadow-md   fixed  overflow-hidden '>  
+        <div
+        
+        className='z-30  hidden md:flex md:w-full h-[80px] bg-transparent  backdrop-blur-sm shadow-md text-[#00004f] p-4    fixed  overflow-hidden '>  
         <div className='flex justify-between items-center text-center   w-[100%]  '>
             <Link href={"/"}>
         <Image src={"/Logo.png"} width={500} height={500} alt='logo' className='w-[250px] h-[60px] text-black' />

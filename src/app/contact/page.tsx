@@ -12,8 +12,6 @@ const wait = async (ms:number) => {
 }
 
 
-
-
 const Contact = async () => {
   await wait(2000);
   
