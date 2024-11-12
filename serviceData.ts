@@ -35,6 +35,7 @@ export const categories:Category[]=[
     id:"service-2",
     title:"Data Entry, Data Mining, & Data Scraping",
     mainImage:"/report-creation/main-img.jpg",
+    description:"",
       items:[
         {image:"/dataentry/img1.webp",
             title:"Scraping Real Estate Data",
@@ -60,6 +61,7 @@ export const categories:Category[]=[
     id:"service-3",
     title:"Real Estate Social Media Marketing",
     mainImage:"/report-creation/main-img.jpg",
+    description:"",
     items:[
         {
             image:"/socialmediaimage/img1.jpg",
@@ -88,6 +90,7 @@ export const categories:Category[]=[
     id:"service-4",
     title:"Graphic Designing for Real estate Promos",
     mainImage:"/report-creation/main-img.jpg",
+    description:"",
     items:[
         {
             image:"/socialmediaimage/img1.jpg",
@@ -116,6 +119,7 @@ export const categories:Category[]=[
     id:"service-5",
     title:"Property Listing & Research",
     mainImage:"/report-creation/main-img.jpg",
+    description:"",
     items:[
         {
             image:"/socialmediaimage/img1.jpg",
@@ -143,6 +147,7 @@ export const categories:Category[]=[
     id:"service-6",
     title:"Spreadsheet & Documentation work",
     mainImage:"/report-creation/main-img.jpg",
+    description:"",
     items:[
         {
             image:"/socialmediaimage/img1.jpg",
@@ -170,6 +175,7 @@ export const categories:Category[]=[
     id:"service-7",
     title:"Email Handling & Campaign Management",
     mainImage:"/report-creation/main-img.jpg",
+    description:"",
     items:[
         {
             image:"/socialmediaimage/img1.jpg",
@@ -197,6 +203,7 @@ export const categories:Category[]=[
     id:"service-8",
     title:"General Administrative Support",
     mainImage:"/report-creation/main-img.jpg",
+    description:"",
     items:[
         {
             image:"/socialmediaimage/img1.jpg",
@@ -224,6 +231,7 @@ export const categories:Category[]=[
     id:"service-9",
     title:"Search Engine Optimization",
     mainImage:"/report-creation/main-img.jpg",
+    description:"",
     items:[
         {
             image:"/socialmediaimage/img1.jpg",

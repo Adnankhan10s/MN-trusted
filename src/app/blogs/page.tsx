@@ -19,9 +19,12 @@ const poppins = Poppins({
   subsets: ["latin"]
 });
 
+const wait = async (ms:number) => {
+  return new Promise(resolve =>setTimeout(resolve , ms))
+}
 
-
-const page = () => {
+const page = async () => {
+  await wait(2000);
   return (
     // Nav Section
     <div className='bg-blue-500  md:w-full'>

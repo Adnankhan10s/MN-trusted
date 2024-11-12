@@ -6,13 +6,7 @@ import { categories } from '../../../../serviceData';
 import { notFound } from 'next/navigation';
 import { Oswald } from 'next/font/google';
 import ItemList from '@/components/otherComponents/ItemList';
-import { Montserrat } from 'next/font/google';
 
-const monserrat = Montserrat({
-weight:"600",
-subsets:["latin"],
-display:"auto"
-});
 
 const oswald = Oswald({
    weight:"600",
@@ -25,9 +19,11 @@ interface CategoryPageProps{
         category:string;
     };
 }
-
-const page = ({params}:CategoryPageProps) => {
-
+const wait = async (ms:number) => {
+    return new Promise(resolve =>setTimeout(resolve , ms))
+};
+const page = async ({params}:CategoryPageProps) => {
+    await wait(2000);
        const {category}= params;
        const categoryData = categories.find((cat)=> cat.id === category);
     if(!categoryData){
