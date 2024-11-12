@@ -55,7 +55,7 @@ const page = async () => {
      </div>
      <div className='w-full min-h-[500px]'>
       
-      //Blogs
+      {/* //Blogs */}
        
       
 
