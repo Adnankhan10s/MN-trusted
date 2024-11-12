@@ -36,7 +36,7 @@ const Carousel: FC<CarouselProps> = ({ slides }) => {
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
-          <div className="relative w-full h-[500px]">
+          <div className="relative w-full md:h-[500px] h-[400px]">
             <Image priority src={slide.image} width={1200} height={800} alt={`Slide ${index}`} className="w-full h-full opacity-45" />
             
             <h1 className={`absolute px-4 md:px-0 ${poppins.className} top-[200px] inset-0 text-center flex items-center justify-center bg-clip-text text-transparent text-lg  md:text-3xl font-extrabold bg-gradient-to-r from-gray-700 via-indigo-900 to-gray-700 `}>
