@@ -39,7 +39,7 @@ const slides = [
 ];
 
 
-const page : React.FC =  () => {
+const Page : React.FC =  () => {
 
 const [blogData, setBlogData] = useState<Blog[]>([])
 
@@ -216,4 +216,4 @@ const [blogData, setBlogData] = useState<Blog[]>([])
   )
 }
 
-export default page
+export default Page
