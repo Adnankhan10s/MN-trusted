@@ -2,8 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { Roboto } from 'next/font/google';
-import { Blog } from '@/app/blogs/page';
-
+import { Blog } from '../Blog';
 
 const roboto = Roboto({
   weight:"400",
