@@ -39,7 +39,7 @@ const ServiceList = () => {
  <div className='grid md:grid-cols-2   md:gap-x-16 gap-y-2 mt-10  '>
           {categories.map((category)=>(
            
-       <Link key={category.id} href={`/categories/${category.id}`} className=' md:text-[16px] text-[12px]  px-2 py-2 border hover:bg-[#f99b27] hover:border-white hover:text-white border-[#00004f]  text-[#00004f] text-start md:items-end gap-4 inline-flex font-bold   '>
+       <Link key={category.id} prefetch={true} href={`/categories/${category.id}`} className=' md:text-[16px] text-[12px]  px-2 py-2 border hover:bg-[#f99b27] hover:border-white hover:text-white border-[#00004f]  text-[#00004f] text-start md:items-end gap-4 inline-flex font-bold   '>
          
              {category.title} <MdOutlineKeyboardArrowRight size={20}  /> 
              </Link>

@@ -36,7 +36,7 @@ const page = async ({params}:CategoryPageProps) => {
              <Navbar />
              <div className='w-full h-full bg-slate-200 pb-10'>
              <div className='w-full h-[300px] md:h-[600px] shadow-md pt-20 '>
-              <Image src={categoryData.mainImage}  alt='Main Img' width={1000} height={700} priority className='w-full h-full  object-fill' />
+              <Image src={categoryData.mainImage}  alt={categoryData.title} width={1000} height={700} priority className='w-full h-full  object-fill' />
              </div>
              <div className='w-full pt-6 md:pt-8 '>
                 
