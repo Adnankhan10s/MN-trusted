@@ -16,5 +16,16 @@ export async function POST(req:NextRequest ){
         return NextResponse.json({error:'Failed to Create Blog'},{status:400});
 
     }
+}
+
+export async function GET (req:NextRequest , res: NextResponse){
+    try {
+        await dbConnect();
+        const blogs = await Blog.find({}) ;
+        return NextResponse.json(blogs , {status:200});
+    } catch (error) {
+        console.error("Error While Fetching Data", error);
+        return NextResponse.json({error:'Failed to Get Blogs'}, {status:401})
+    }
 
 }
