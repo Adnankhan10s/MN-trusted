@@ -30,7 +30,7 @@ const BlogCard : React.FC< BlogCardProps > = ({blog}) => {
             </div>
             <div className='flex justify-between items-center px-4  my-4'>
                    <Link href={'/'} className='   duration-300 text-blue-800 text-lg font-bold hover:text-blue-600' >Read More</Link>
-                   <p>{blog.createdAt.toLocaleString()} </p>
+                   <p>{blog.createdAt.toLocaleDateString()} </p>
             </div>
 
          </div>
