@@ -38,12 +38,14 @@ const slides = [
 
 async function fetchBlogs(): Promise<Blog[]> {
   try {
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`,{
-      headers:{
-        Accept:'application/json'
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
+      next: { revalidate: 10 }, 
+      headers: {
+        Accept: 'application/json',
       },
     });
-    return response.data;
+    const data = await response.json();
+    return data;
   } catch (error) {
     console.error('Error fetching blogs:', error);
     return [];
