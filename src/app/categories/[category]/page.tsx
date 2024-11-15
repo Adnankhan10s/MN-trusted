@@ -14,18 +14,20 @@ const oswald = Oswald({
    display:"auto"
 });
 
-interface CategoryPageProps{
-    params:{
-        category:string;
-    };
-}
+interface CategoryPageProps {
+    categoryData: typeof categories[0]; 
+  };
+  export async function generateStaticParams() {
+    return categories.map(category => ({
+      category: category.id, 
+    }));
+  }
 const wait = async (ms:number) => {
     return new Promise(resolve =>setTimeout(resolve , ms))
 };
-const page = async ({params}:CategoryPageProps) => {
+const page = async ({ params }: { params: { category: string } }) => {
     await wait(2000);
-       const {category}= params;
-       const categoryData = categories.find((cat)=> cat.id === category);
+       const categoryData = categories.find((cat)=> cat.id === params.category);
     if(!categoryData){
         notFound();
     }

@@ -1,6 +1,6 @@
-"use client"
+
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React  from 'react';
 import { Poppins, Cookie } from 'next/font/google';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import Image from 'next/image';
@@ -36,25 +36,19 @@ const slides = [
   { image: '/banner/b3.jpg', text: 'Explore expert insights, property market trends, and tips to make informed investments' },
 ];
 
+async function fetchBlogs(): Promise<Blog[]> {
+  try {
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching blogs:', error);
+    return [];
+  }
+}
 
+const Blog  = async  () => {
+   const blogData = await fetchBlogs();
 
-const Blog  =   () => {
-  
-  const [blogData, setBlogData] = useState<Blog[]>([]);
-  useEffect(() => {
-
-    const fetchBlog = async ()=>{
-        
-       try {
-        const response = await axios.get("/api/blogs");
-        
-        return setBlogData(response.data);
-       } catch (error) {
-         console.log("Fetchin Data Error " , error)
-       }
-    }
-    fetchBlog();
- }, []);
 
   return (
     // Nav Section
@@ -89,7 +83,7 @@ const Blog  =   () => {
 
      <div className='w-full min-h-[600px] h-full justify-items-center  mt-8 md:mt-20 grid grid-cols-1  sm:grid-cols-2 gap-6 md:grid-cols-3 2xl:grid-cols-4'>
      {
-      blogData.map((blog)=>(
+      blogData.map((blog:Blog)=>(
         <BlogCard key={blog._id} blog={blog}/>
       ))
     
