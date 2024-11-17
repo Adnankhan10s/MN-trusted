@@ -27,8 +27,6 @@ export interface Blog extends Document {
 }
 
 
-
-
 const slides = [
   { image: '/banner/b1.jpg', text: 'Home Buying Tips and Property Insights from Industry Experts' },
   { image: '/banner/b2.jpg', text: 'Discover the Latest in Real Estate Market Trends and Opportunities' },

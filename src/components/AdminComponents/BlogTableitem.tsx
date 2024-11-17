@@ -6,11 +6,6 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 
 
-
-
-
-
-
 interface BlogTableItemProps {
   blogs: Blog[];
 }

@@ -26,7 +26,7 @@ const wait = async (ms:number) => {
     return new Promise(resolve =>setTimeout(resolve , ms))
 };
 const Page = async ({ params }: { params: { category: string } }) => {
-    await wait(2000);
+       await wait(2000);
        const categoryData = categories.find((cat)=> cat.id === params.category);
     if(!categoryData){
         notFound();
