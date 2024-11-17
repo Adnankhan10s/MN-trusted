@@ -3,7 +3,7 @@ import Image from "next/image";
 import { MdDeleteOutline } from "react-icons/md";
 import  { Blog } from "../Blog";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 
 
@@ -32,6 +32,7 @@ const BlogTableitem : React.FC<BlogTableItemProps> = ({ blogs}) => {
   return (
 
     <>
+    <ToastContainer />
    
     {
        blogs.map((blog)=>(
