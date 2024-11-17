@@ -1,11 +1,15 @@
 import BlogTableitem from "@/components/AdminComponents/BlogTableitem"
 import { Blog } from "@/components/Blog"
-import axios from "axios"
 
 const fetchBlog = async(): Promise<Blog[]> =>{
   try {
-     const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`)
-    const blogs :Blog[] = res.data
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
+      cache:'no-store' ,
+       headers: {
+         Accept: 'application/json',
+       },
+     });   
+      const blogs :Blog[] =await res.json();
       return blogs
   } catch (error) {
     console.log(error)
