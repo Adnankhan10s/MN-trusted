@@ -66,7 +66,7 @@ const Page = () => {
 
         {/* Show the uploaded image or error */}
         <div className="bg-gray-400 w-[200px] h-[130px] relative mt-2 shadow-lg border border-blue-300">
-        {imageUrl ? <Image layout="fill" objectFit="cover" src={imageUrl} alt="Uploaded" />:<Image layout="fill" objectFit="cover" src={"/upload_area.png"} alt="Upload"/>}
+        {imageUrl ? <Image layout="fill" objectFit="cover" src={imageUrl}  alt="Uploaded" />:<Image layout="fill" objectFit="cover" src={"/upload_area.png"} alt="Upload"/>}
         </div>
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 

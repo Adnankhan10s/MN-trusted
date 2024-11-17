@@ -25,7 +25,7 @@ interface CategoryPageProps {
 const wait = async (ms:number) => {
     return new Promise(resolve =>setTimeout(resolve , ms))
 };
-const page = async ({ params }: { params: { category: string } }) => {
+const Page = async ({ params }: { params: { category: string } }) => {
     await wait(2000);
        const categoryData = categories.find((cat)=> cat.id === params.category);
     if(!categoryData){
@@ -38,7 +38,7 @@ const page = async ({ params }: { params: { category: string } }) => {
              <Navbar />
              <div className='w-full h-full bg-slate-200 pb-10'>
              <div className='w-full h-[300px] md:h-[600px] shadow-md pt-20 '>
-              <Image src={categoryData.mainImage}  alt={categoryData.title} width={1000} height={700} priority className='w-full h-full  object-fill' />
+              <Image src={categoryData.mainImage}  alt={categoryData.title} width={1000} height={700} className='w-full h-full  object-fill' />
              </div>
              <div className='w-full pt-6 md:pt-8 '>
                 
@@ -61,4 +61,4 @@ const page = async ({ params }: { params: { category: string } }) => {
     )
 }
 
-export default page
+export default Page;

@@ -107,7 +107,7 @@ const Navbar = () => {
                  {nav ? <AiOutlineClose size={25} />: <AiOutlineMenu size={25}/>}
             </div>
              <Link href={"/"}>
-               <Image src={"/Logo.png"} width={500} height={500} alt='logo' className=' w-[180px] h-[60px] text-black  ' />
+               <Image src={"/Logo.png"} width={500} height={500} alt='logo' className=' w-[150px] h-[40px] text-black  ' />
                </Link>
                </div>
                 

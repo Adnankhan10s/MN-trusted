@@ -1,8 +1,22 @@
-"use client"
-
 import BlogTableitem from "@/components/AdminComponents/BlogTableitem"
+import { Blog } from "@/components/Blog"
+import axios from "axios"
 
-const page = () => {
+const fetchBlog = async(): Promise<Blog[]> =>{
+  try {
+     const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`)
+    const blogs :Blog[] = res.data
+      return blogs
+  } catch (error) {
+    console.log(error)
+    return [];
+  }
+
+}
+
+
+const page = async () => {
+  const blogs = await fetchBlog();
   return (
     <div className="flex-1 pt-5 px-5 sm:pt-12 sm:pl-16">
       <h1>All Blogs</h1>
@@ -25,7 +39,7 @@ const page = () => {
               </tr>
             </thead>
             <tbody>
-              <BlogTableitem />
+              <BlogTableitem  blogs={blogs} />
             </tbody>
 
           </table>

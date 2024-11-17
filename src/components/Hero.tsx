@@ -27,7 +27,7 @@ const Hero = () => {
            </div>
            <div>
            <div className='md:w-full  font-bold text-center text-lg md:text-2xl lg:text-4xl 2xl:text-5xl'>
-                   <h1 className={`md:bg-gradient-to-r  from-gray-700 via-indigo-900 to-gray-700  text-[#ff874a] md:bg-clip-text md:text-transparent p-4 ${poppins.className}`}>ARE YOU A BUSY ENTREPRENEUR IMPACTED BY<br/>
+                   <h1 className={`md:bg-gradient-to-r  from-gray-700 via-indigo-900 to-gray-700 text-[#ff874a] md:bg-clip-text md:text-transparent p-4 ${poppins.className}`}>ARE YOU A BUSY ENTREPRENEUR IMPACTED BY<br/>
                     INFLATION & HIGH OPERATIONAL COSTS?</h1>
                 </div>
                 <div className='md:hidden mx-auto overflow-clip  w-[350px]  h-[200px] rounded-md border-white border-2 shadow-md my-8'>

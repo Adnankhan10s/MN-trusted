@@ -7,16 +7,6 @@ import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Carousel from '@/components/Crousel'
 import BlogCard from '@/components/otherComponents/BlogCard';
-import axios from 'axios';
-
-export interface Blog extends Document {
-  _id:string;
-  title:string;
-  description:string;
-  imageUrl:string;
-  createdAt:Date;
-}
-
 const cookie = Cookie({
   weight:"400",
   subsets:["latin"],
@@ -28,6 +18,15 @@ const poppins = Poppins({
   display: "swap",
   subsets: ["latin"]
 });
+export interface Blog extends Document {
+  _id:string;
+  title:string;
+  description:string;
+  imageUrl:string;
+  createdAt:Date;
+}
+
+
 
 
 const slides = [
@@ -39,13 +38,14 @@ const slides = [
 async function fetchBlogs(): Promise<Blog[]> {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
-      next: { revalidate: 10 }, 
+     cache:'no-store' ,
       headers: {
         Accept: 'application/json',
       },
     });
     const data = await response.json();
     return data;
+    
   } catch (error) {
     console.error('Error fetching blogs:', error);
     return [];

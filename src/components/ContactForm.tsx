@@ -19,7 +19,6 @@ const schema = yup.object().shape({
   email: yup.string().email("Invalid email format").required("Email is required"),
   phone: yup
     .string()
-    .matches(/^\d{10}$/, "Phone number must be 10 digits")
     .required("Phone number is required"),
   country: yup.string().required("Please select a country"),
   category: yup.string().required("Please select a category"),
@@ -30,7 +29,7 @@ const countries = ["United States", "Canada",  "United Kingdom", "Australia"];
 
 const  ContactForm=()=> {
     const {
-        register, handleSubmit, formState: { errors },
+        register, handleSubmit,reset, formState: { errors },
     } = useForm({
         resolver: yupResolver(schema),
     });
@@ -48,7 +47,7 @@ const  ContactForm=()=> {
 
         if (response.ok) {
             toast.success("Message sent successfully!");
-            
+            reset();
         } else {
             toast.error("Failed to send message.");
            
@@ -56,9 +55,9 @@ const  ContactForm=()=> {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="md:max-w-4xl mx-auto p-8 bg-white/40 backdrop-blur-md shadow-lg rounded-lg">
+        <form onSubmit={handleSubmit(onSubmit)} className="md:max-w-4xl mx-auto p-8 bg-blue-100 backdrop-blur-md shadow-lg rounded-lg">
             <ToastContainer />
-            <h1 className={`${bebas_neue.className}md:text-6xl text-4xl font-bold mb-6 text-center text-[#ff874a]`}>Contact Us</h1>
+            <h1 className={`${bebas_neue.className}md:text-6xl text-4xl font-bold mb-6 text-center text-[#00004f]`}>Contact Us</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
                 <div>

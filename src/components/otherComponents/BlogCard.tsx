@@ -16,8 +16,8 @@ const BlogCard : React.FC< BlogCardProps > = ({blog}) => {
   return (
  
          <div className='w-[320px] h-[430px] md:w-[350px] shadow-lg shadow-blue-200 md:h-[450px] bg-white rounded border-black/40 border mx-auto flex flex-col overflow-clip'>
-            <div className='border-b border-black/70 h-[250px] overflow-hidden '>
-                <Image src={blog.imageUrl} width={500} height={500} alt='Cardimg' priority className='object-contain' />
+            <div className='border-b relative border-black/70 w-full h-[250px] overflow-hidden '>
+                <Image src={blog.imageUrl} sizes='auto' fill alt='Cardimg' priority className='object-cover w-auto h-auto' />
             </div>
             <div className={`${roboto.className} text-[#00004f] h-[20px]  px-2 mt-2`}>
                  <h2 className='md:text-xl text-lg font-bold'>{blog.title}</h2>
@@ -30,7 +30,7 @@ const BlogCard : React.FC< BlogCardProps > = ({blog}) => {
             </div>
             <div className='flex justify-between items-center px-4  my-4'>
                    <Link href={'/'} className='   duration-300 text-blue-800 text-lg font-bold hover:text-blue-600' >Read More</Link>
-                   <p>{blog.createdAt.toLocaleString()} </p>
+                   <p>{new Date(blog.createdAt).toLocaleDateString()} </p>
             </div>
 
          </div>
