@@ -14,6 +14,8 @@ interface BlogCardProps {
     blog: Blog;
   }
 const BlogCard : React.FC< BlogCardProps > = ({blog}) => {
+  const truncatedTitle = blog.title.length > 30 ? blog.title.substring(0,30)+"...":blog.title;
+  const truncatedBlogDes = blog.description.length > 150 ? blog.description.substring(0,150) + " . . . .":blog.description;
   return (
  
          <div key={blog._id} className='w-[320px] h-[430px] md:w-[350px] shadow-lg shadow-blue-200 md:h-[450px] bg-white rounded border-black/40 border mx-auto flex flex-col overflow-clip'>
@@ -21,11 +23,11 @@ const BlogCard : React.FC< BlogCardProps > = ({blog}) => {
                 <Image src={blog.imageUrl} sizes='auto' fill alt='Cardimg' priority className='object-cover w-auto h-auto' />
             </div>
             <div className={`${roboto.className} text-[#00004f] h-[20px]  px-2 mt-2`}>
-                 <h2 className='md:text-xl text-lg font-bold'>{blog.title}</h2>
+                 <h2 className='md:text-xl text-lg font-bold'>{truncatedTitle}</h2>
             </div>
             <div className='px-2 mt-2 md:text-base text-gray-900 h-[100px] text-sm md:h-[120px] overflow-clip  '>
                 <p>{
-                    blog.description
+                    truncatedBlogDes
                     } 
                 </p>
             </div>
