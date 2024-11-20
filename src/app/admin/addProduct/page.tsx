@@ -8,6 +8,7 @@ const Page = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [imageUrl, setImageUrl] = useState('');
+  const [category, setCategory] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleUpload = ( result: any) => {
@@ -35,6 +36,7 @@ const Page = () => {
       title,
       description,
       imageUrl,
+      category,
     };
 
     try {
@@ -42,6 +44,7 @@ const Page = () => {
       setTitle(''); // Reset form
       setDescription('');
       setImageUrl('');
+      setCategory('');
       setErrorMessage(''); // Clear any previous error message
     } catch (error) {
       console.error('Error submitting the image:', error);
@@ -79,6 +82,14 @@ const Page = () => {
       <p className="text-xl mt-4">Blog Description</p>
       <textarea className="w-full sm:w-[600px] mt-4 px-4 py-3 border" onChange={(e)=>setDescription(e.target.value)} value={description}  placeholder="Blog Desciption Here" rows={8} required />  
       <br />
+      <div className="mt-2 flex gap-3">
+        <label>Select Category :</label>
+        <select value={category} onChange={(e)=>setCategory(e.target.value)} name="category" className="border-gray-600 border px-2">
+          <option value="Real Estate">Real Estate</option>
+          <option value="Data Handling">Data Handling</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
       <button type="submit" className="mt-8 w-40 h-12 bg-[#0066cc] text-white">ADD</button>   
       </form>
       

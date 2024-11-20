@@ -88,7 +88,7 @@ const Navbar = () => {
         {/* Mobile view */}
        <div className='z-50 md:hidden w-full h-[80px] fixed   '>
 <div className=' z-50 md:hidden relative px-4   flex items-center w-full h-[80px] bg-white/40 backdrop-blur-md  shadow-md '>
-<Image src={"/Logo.png"} width={500} height={500} alt='logo' className='w-[180px] h-[50px] text-black' />
+<Image src={"/Logo.png"} width={500} height={500} alt='logo' className='w-[150px] h-[40px] text-black' />
 
          
             <div onClick={toggleNav} className="md:hidden absolute top-5 right-4 border rounded text-black border-black/80 p-2 ">

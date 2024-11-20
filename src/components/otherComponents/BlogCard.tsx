@@ -1,5 +1,5 @@
+
 import Image from 'next/image';
-import { use } from 'react';
 import Link from 'next/link';
 import React from 'react';
 import { Roboto } from 'next/font/google';
@@ -17,7 +17,7 @@ const BlogCard : React.FC< BlogCardProps > = ({blog}) => {
   const truncatedTitle = blog.title.length > 30 ? blog.title.substring(0,30)+"...":blog.title;
   const truncatedBlogDes = blog.description.length > 150 ? blog.description.substring(0,150) + " . . . .":blog.description;
   return (
- 
+
          <div key={blog._id} className='w-[320px] h-[430px] md:w-[350px] shadow-lg shadow-blue-200 md:h-[450px] bg-white rounded border-black/40 border mx-auto flex flex-col overflow-clip'>
             <div className='border-b relative border-black/70 w-full h-[250px] overflow-hidden '>
                 <Image src={blog.imageUrl} sizes='auto' fill alt='Cardimg' priority className='object-cover w-auto h-auto' />
@@ -31,13 +31,15 @@ const BlogCard : React.FC< BlogCardProps > = ({blog}) => {
                     } 
                 </p>
             </div>
+            
+                <p className='px-4 py-1 bg-black/70 text-white font-bold'> {blog.category}</p>
             <div className='flex justify-between items-center px-4  my-4'>
                    <Link href={`/blogDetails/${blog._id}`} className='   duration-300 text-blue-800 text-lg font-bold hover:text-blue-600' >Read More</Link>
                    <p>{new Date(blog.createdAt).toLocaleDateString()} </p>
             </div>
 
          </div>
-   
+        
 
   );
 };

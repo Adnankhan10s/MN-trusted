@@ -1,12 +1,14 @@
-
+"use client"
 import Link from 'next/link';
-import React  from 'react';
+import React, { useEffect, useState }  from 'react';
 import { Poppins, Cookie } from 'next/font/google';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
 import Carousel from '@/components/Crousel'
 import BlogCard from '@/components/otherComponents/BlogCard';
+import axios from 'axios';
+import BlogSpin from './otherComponents/BlogSpin';
 const cookie = Cookie({
   weight:"400",
   subsets:["latin"],
@@ -23,6 +25,7 @@ export interface Blog extends Document {
   title:string;
   description:string;
   imageUrl:string;
+  category:string;
   createdAt:Date;
 }
 
@@ -33,29 +36,32 @@ const slides = [
   { image: '/banner/b3.jpg', text: 'Explore expert insights, property market trends, and tips to make informed investments' },
 ];
 
-async function fetchBlogs(): Promise<Blog[]> {
-  try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
-     cache:'no-store' ,
-      headers: {
-        Accept: 'application/json',
-      },
-    });
-    const data = await response.json();
-    return data;
-    
-  } catch (error) {
-    console.error('Error fetching blogs:', error);
-    return [];
+
+
+const Blog  = () => {
+  //  const blogData = await fetchBlogs();
+   const [menu, setMenu] = useState ("All");
+   const [blogs ,setBlogs] = useState<Blog[]>([]);
+   const [loader, setLoader] = useState(true);
+
+   async function fetchBlogs() {
+    try {
+      const response = await axios.get('/api/blogs');
+      setBlogs(response.data);
+         setLoader(false)
+    } catch (error) {
+      console.error('Error fetching blogs:', error);
+      return [];
+    }
   }
-}
-
-const Blog  = async  () => {
-   const blogData = await fetchBlogs();
-
+  useEffect(() => {
+    fetchBlogs()
+  }, [])
+  
 
   return (
     // Nav Section
+    
      <section className='bg-slate-200 w-full h-full  '>
      
        <div className='bg-[#385386] backdrop-blur-md w-full h-[70px] md:h-[80px] flex justify-between md:justify-between  content-center items-center shadow-lg shadow-black md:px-4 px-2 fixed z-50 overflow-hidden'>
@@ -84,18 +90,26 @@ const Blog  = async  () => {
      <div className='text-center'>
       <p className=' pt-4 md:px-28 px-10 font-serif font-medium text-gray-950 md:font-bold '>Welcome to our blog, where we share the latest insights, trends, and stories from our field. Whether you're looking for tips, industry news, or in-depth guides, our blog has something for everyone. Dive into our curated articles and explore fresh perspectives to keep you informed and inspired.</p>
      </div>
-
-     <div className='w-full min-h-[600px] h-full justify-items-center  mt-8 md:mt-20 grid grid-cols-1  sm:grid-cols-2 gap-6 md:grid-cols-3 2xl:grid-cols-4'>
-     {
-      blogData.map((blog:Blog)=>(
+    <div className='w-full flex justify-center gap-6 my-10'>
+      <button onClick={()=>setMenu('All')} className={menu==="All" ?'bg-black/80 text-white py-1 px-4 rounded-sm':""}>All</button>
+      <button onClick={()=>setMenu('Real Estate')} className={menu==="Real Estate" ?'bg-black/80 text-white py-1 px-4 rounded-sm':""}>Real Estate</button>
+      <button onClick={()=>setMenu('Data Handling')} className={menu==="Data Handling" ?'bg-black/80 text-white py-1 px-4 rounded-sm':""}>Data Handling</button>
+      <button onClick={()=>setMenu('Other')} className={menu==="Other" ?'bg-black/80 text-white py-1 px-4 rounded-sm':""}>Other</button>
+      </div>
+  
+      <div className='w-full h-full justify-items-center  mt-8 md:mt-20 grid grid-cols-1  sm:grid-cols-2 gap-6 md:grid md:grid-cols-3 2xl:grid-cols-4'>
+      {
+  
+            loader?<div className='w-full h-[500px]'><BlogSpin/></div>:
+      blogs.filter((item:any)=>menu==="All"?true:item.category===menu).map((blog:Blog)=>(
         <BlogCard key={blog._id} blog={blog}/>
       ))
     
      
-   
+     
     }
-
-     </div>
+  </div>
+   
     
      <Footer />
      </section>
