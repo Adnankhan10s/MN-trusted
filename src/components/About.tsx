@@ -30,7 +30,7 @@ const services = [
 const About = () => {
   return (
     <>
-      <div id='about' className='py-10 md:py-6 border-b-2 border-[#00004f] w-full md:h-full h-full  bg-slate-200 border-t-2  shadow-inner'>
+      <div id='about' className='pb-10 md:py-6 border-b-2 border-[#00004f] w-full md:h-full h-full  bg-slate-200 md:border-t-2  shadow-inner'>
         <AboutHead />
 
          <AboutCard />
