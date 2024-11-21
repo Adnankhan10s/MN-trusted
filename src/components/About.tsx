@@ -38,11 +38,9 @@ const About = () => {
          <h1 className=' text-[#00004f] md:text-2xl text-xl font-bold'>
            Get the best property listing services</h1>
 
-        <p className='text-[12px] md:text-[16px] px-2 pt-2'> Find the best property listing services you need to help you successfully meet your project planning goals and deadline </p>
 
-         <p className='md:text-base text-[14px] px-4 pt-2'> We specialize in providing Virtual Assistance tailored for the Real Estate industry, backed by over a decade of experience. Alongside my dedicated team, we have successfully executed numerous projects for a diverse clientele including Investors, Agents, Brokers, and Property Owners.</p>
 
-        <p className='pt-2'>Our team offers expertise in a wide range of services, including:
+        <p className='pt-2 text-[14px] md:text-[20px]'>Our team offers expertise in a wide range of services, including:
          </p>
 
          <ul className='pt-6 text-start px-14 leading-8 space-y-4 '>
@@ -51,9 +49,9 @@ const About = () => {
           ))}
 
          </ul>
-         <div className='pt-6 leading-8 text-center px-4 '>
+         <div className='pt-8 leading-8 text-center px-4 '>
         <p className='text-[12px] md:text-base'>With a focus on delivering high-quality results and maintaining client satisfaction, we are committed to streamlining operations and enhancing productivity within the Real Estate sector.</p>
-         <p className='text-[12px] md:text-base'>Please feel free to reach out to us for any of your virtual assistance needs in the real estate industry. We look forward to discussing how we can support and enhance your business operations.
+         <p className='text-[12px]  md:text-base'>Please feel free to reach out to us for any of your virtual assistance needs in the real estate industry. We look forward to discussing how we can support and enhance your business operations.
          </p>
        </div>
       </div>
