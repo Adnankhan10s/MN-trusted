@@ -11,7 +11,7 @@ export  async function POST(req:NextRequest ){
         const newBlog = new Blog(body);
         await newBlog.save();
         console.log(newBlog)
-        return NextResponse.json(newBlog , {status:201});
+        return NextResponse.json({message:"Blog Uploaded"} , {status:201});
     }catch(error){
         console.error('Error creating blog:',error);
         return NextResponse.json({error:'Failed to Create Blog'},{status:400});
@@ -24,6 +24,7 @@ export  async function GET (req:NextRequest , res: NextResponse){
         await dbConnect();
         const blogs = await Blog.find({}) ;
         return NextResponse.json(blogs , {status:200});
+   
     } catch (error) {
         console.error("Error While Fetching Data", error);
         return NextResponse.json({error:'Failed to Get Blogs'}, {status:401})

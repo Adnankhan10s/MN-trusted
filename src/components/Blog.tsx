@@ -39,7 +39,6 @@ const slides = [
 
 
 const Blog  = () => {
-  //  const blogData = await fetchBlogs();
    const [menu, setMenu] = useState ("All");
    const [blogs ,setBlogs] = useState<Blog[]>([]);
    const [loader, setLoader] = useState(true);
@@ -90,12 +89,14 @@ const Blog  = () => {
      <div className='text-center'>
       <p className=' pt-4 md:px-28 px-10 font-serif font-medium text-gray-950 md:font-bold '>Welcome to our blog, where we share the latest insights, trends, and stories from our field. Whether you're looking for tips, industry news, or in-depth guides, our blog has something for everyone. Dive into our curated articles and explore fresh perspectives to keep you informed and inspired.</p>
      </div>
-    <div className='w-full flex justify-center gap-6 my-10'>
+    <div className='w-full flex justify-center gap-6 my-10 px-6 overflow-scroll md:overflow-auto'>
       <button onClick={()=>setMenu('All')} className={menu==="All" ?'bg-black/80 text-white py-1 px-4 rounded-sm':""}>All</button>
       <button onClick={()=>setMenu('Real Estate')} className={menu==="Real Estate" ?'bg-black/80 text-white py-1 px-4 rounded-sm':""}>Real Estate</button>
       <button onClick={()=>setMenu('Data Handling')} className={menu==="Data Handling" ?'bg-black/80 text-white py-1 px-4 rounded-sm':""}>Data Handling</button>
       <button onClick={()=>setMenu('Other')} className={menu==="Other" ?'bg-black/80 text-white py-1 px-4 rounded-sm':""}>Other</button>
+      
       </div>
+     
   
       <div className='w-full h-full justify-items-center  mt-8 md:mt-20 grid grid-cols-1  sm:grid-cols-2 gap-6 md:grid md:grid-cols-3 2xl:grid-cols-4'>
       {
