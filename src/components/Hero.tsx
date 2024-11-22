@@ -20,13 +20,13 @@ const roboto = Roboto({
 
 const Hero = () => {
     return (
-        <div className=' z-10 md:w-full h-screen py-6 md:py-0 md:h-screen 2xl:h-screen w-full  bg-slate-200 border-b-2  border-black md:mt-0 relative  items-center' id='home'>          
+        <div className=' z-10 md:w-full h-full py-6 md:py-0 md:h-screen 2xl:h-screen w-full  bg-slate-200 border-b-2  border-black md:mt-0 relative  items-center' id='home'>          
         <div className=''>
         <div className='md:hidden pt-[90px] text-center justify-center items-center py-6'>
            <p className='text-base px-4 md:px-0 md:text-lg  2xl:text-2xl font-bold text-center  font-serif text-[#00004f] p-2 inline-flex items-center'>
                 Providing Real Estate Virtual Assistant Services since 2009 in  United States and other parts of the world.
             </p>
-            <div className='  w-full  font-bold text-center my-4 text-lg'>
+            <div className='  w-full  font-bold text-center my-2 text-lg'>
                    <h1 className={`md:bg-gradient-to-r  from-gray-700 via-indigo-900 to-gray-700 text-[#f99b27]  md:bg-clip-text md:text-transparent p-4 ${poppins.className}`}>ARE YOU A BUSY ENTREPRENEUR IMPACTED BY<br/>
                     INFLATION & HIGH OPERATIONAL COSTS?</h1>
                 </div>
