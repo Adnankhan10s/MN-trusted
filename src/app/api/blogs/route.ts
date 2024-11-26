@@ -2,9 +2,15 @@ import { NextRequest , NextResponse } from "next/server";
 import dbConnect from "@/lib/dbConnect";
 import { Blog } from "@/models/Blog";
 import cloudinary from "@/lib/cloudinary";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../auth/[...nextauth]/options";
 
 
 export  async function POST(req:NextRequest ){
+    const session = await getServerSession(authOptions);
+    if (!session) {
+        return NextResponse.json({error:"Unauthorized"}, {status:402});
+    }
     try{
         const body = await req.json();
         await dbConnect();
@@ -20,6 +26,7 @@ export  async function POST(req:NextRequest ){
 }
 
 export  async function GET (req:NextRequest , res: NextResponse){
+    
     try {
         await dbConnect();
         const blogs = await Blog.find({}) ;
@@ -33,6 +40,10 @@ export  async function GET (req:NextRequest , res: NextResponse){
 }
 
 export async function DELETE(req:NextRequest){
+    const session = await getServerSession(authOptions);
+    if (!session) {
+        return NextResponse.json({error:"Unauthorized"}, {status:402});
+    }
    try {
     const url = new URL(req.url);
     const id = url.searchParams.get('id');
