@@ -2,9 +2,8 @@
 import React, { useState } from 'react'
 import { signIn } from 'next-auth/react'
 import axios from 'axios'
-import Email from 'next-auth/providers/email'
 
-const page = () => {
+const Login = () => {
    
     const [authState, setAuthState] = useState(
         {
@@ -59,4 +58,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Login
