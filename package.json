@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
+    "@vinejs/vine": "^2.1.0",
     "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
     "cloudinary": "^2.5.1",
     "framer-motion": "^11.3.30",
     "mongoose": "^8.6.4",
     "next": "14.2.11",
+    "next-auth": "^4.24.10",
     "next-cloudinary": "^6.13.0",
     "nodemailer": "^6.9.15",
     "react": "^18",
@@ -27,6 +30,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",

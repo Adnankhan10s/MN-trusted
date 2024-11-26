@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NextAuthProvider from "@/provider/NextAuthProvider";
 
 
 
@@ -18,7 +19,9 @@ export default function RootLayout({
       <body
         className={"z-30"}
       >
-        {children}
+      <NextAuthProvider>
+       {children} 
+       </NextAuthProvider>
       </body>
     </html>
   );
